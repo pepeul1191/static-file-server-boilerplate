@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>title</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <style>
     nav{
       position: fixed;
@@ -47,13 +48,16 @@
   <div class="box container green"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script>
     $(document).ready(function(){
-      $(window).scroll(function(){
-        if($(window).scrollTop() > 300){
-          $('nav').addClass('red');
+      $(window).scroll(function(event){
+        var sc = $(window).scrollTop();
+        console.log(sc);
+        if($(window).scrollTop() >= 700){
+          $('nav').addClass('red', 1000);
         }else{
-          $('nav').removeClass('red');
+          $('nav').removeClass('red', 1000);
         }
       });
     });

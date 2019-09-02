@@ -6,6 +6,8 @@
   <title>title</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="css/megamenumat.css" type="text/css">
   <style>
     nav{
@@ -26,9 +28,13 @@
   </style>
 </head>
 <body>
+<!-- navbar -->
 <nav>
   <div class="">
     <a href="#" class="brand-logo">Web Zone</a>
+    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+      <i class="material-icons">menu</i>
+    </a>
     <ul class="right hide-on-med-and-down">
       <li>
         <a href="#">Home</a>
@@ -67,6 +73,23 @@
     </ul>
   </div>
 </nav>
+<!-- end navbar -->
+<!-- sidebar -->
+<ul class="sidenav" id="mobile-nav">
+  <li>
+    <a href="#">Blog</a>
+  </li>
+  <li>
+    <a href="#">Blog</a>
+  </li>
+  <li>
+    <a href="#">Tutorial</a>
+  </li>
+  <li>
+    <a href="#">Contact</a>
+  </li>
+</ul>
+<!-- end sidebar -->
 <section></section>
 <div class="box container green"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -83,6 +106,7 @@
         $('nav').removeClass('red', 1000);
       }
     });
+    $('.sidenav').sidenav();
   });
 </script>
 </body>
